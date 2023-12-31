@@ -129,7 +129,8 @@ console.log(nuestroTwitter);
 
 const nuestroTitulo = document.querySelector("h1");
 console.log(nuestroTitulo);
-
+console.log(nuestroTitulo.innerText);
+nuestroTitulo.innerText = 'Hola r/ Argentina Programa!';
 
 /*
     Obteniendo elementos similares.
@@ -147,24 +148,30 @@ console.log(nuestroTitulo);
 */
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
+const mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks);
 
+for (let i=0; i<mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText);
+}
 
-
-
+setInterval(function() {
+    nuestroTitulo.innerText = String(Math.random());
+}, 1000);
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-
-
-
+console.log(mediaLinks.length);
 
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-
+for (i=0; i<mediaLinks.length; i++) {
+    console.log(mediaLinks[i]);
+}
 
 
 
@@ -186,7 +193,7 @@ console.log(nuestroTitulo);
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-
+console.log(nuestroTitulo.textContent);
 
 
 
@@ -207,7 +214,8 @@ console.log(nuestroTitulo);
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
+const NOMBRE = prompt('Cómo te llamás?');
+nuestroTitulo.textContent = 'Hola, ' + NOMBRE;
 
 
 
@@ -225,9 +233,7 @@ console.log(nuestroTitulo);
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
-
-
+document.querySelector('img').src = "img/kittens.jpeg";
 
 
 /*
@@ -250,9 +256,8 @@ console.log(nuestroTitulo);
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
-
+nuestroTitulo.style.backgroundColor = 'blue';
+nuestroTitulo.style.fontSize = "90px";
 
 
 /*
@@ -280,6 +285,9 @@ console.log(nuestroTitulo);
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+const NODOIMAGEN = document.createElement('img');
+NODOIMAGEN.src = 'img/woman_bw.jpg';
+document.querySelector('header').appendChild(NODOIMAGEN);
 
 
 
@@ -290,3 +298,20 @@ console.log(nuestroTitulo);
 // Levántate, estira las piernas y celebra tu logro.                      //
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
+
+
+
+const $botonIngresar = document.querySelector('#ingresar');
+
+$botonIngresar.onclick = function() {
+    // alert ('Hiciste click');
+    const edadUsuario = Number(document.querySelector('#edad-usuario').value);
+    let textoResultado;
+
+    if(edadUsuario >= 18) {
+        textoResultado = 'Podés ingresar';
+    } else {
+        textoResultado = 'No podés ingresar';
+    }
+    document.querySelector('#resultado').innerText = textoResultado;
+}
