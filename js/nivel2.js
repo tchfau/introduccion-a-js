@@ -45,9 +45,6 @@
 const comidasFavoritas = ['milanesas', 'pizza', 'empanadas'];
 
 
-
-
-
 /*
     Tamaño del Array
     ================
@@ -262,12 +259,10 @@ for (let i = 3; i <= 22; i+=3) {
 const notaParciales = [10, 4, 5, 6];
 let totalNotas = 0;
 for (let i=0; i<notaParciales.length; i++) {
-    totalNotas = totalNotas + notaParciales[i];
+    totalNotas = totalNotas + notaParciales.length;
 }
 
 console.log('El promdio es ' + totalNotas / notaParciales.length);
-
-
 
 
 /*
@@ -293,7 +288,7 @@ console.log('El promdio es ' + totalNotas / notaParciales.length);
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
-for (let i=0; i<comidasFavoritas.length, i++) {
+for (let i=0; i<comidasFavoritas.length; i++) {
     console.log('Comidas que me gustan: ' + comidasFavoritas[i]);
 }
 
@@ -335,8 +330,20 @@ for (let i=0; i<comidasFavoritas.length, i++) {
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
 
+function fizzbuzz(limite) {
+    for (let i=0; i<=limite; i++) {
+        let mensaje='';
+        if(i%3 === 0) {
+            mensaje = 'Fizz';
+        }
 
-
+        if(i%5 === 0) {
+            mensaje += 'Buzz';
+        }
+        console.log(mensaje || i);
+    }  
+}
+fizzbuzz(50);
 
 
 
