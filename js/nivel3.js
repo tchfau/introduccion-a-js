@@ -95,6 +95,8 @@
     interactuar con HTML.
 */
 
+const nuestroTwitter = document.querySelector('.twitter');
+console.log(nuestroTwitter);
 
 /*
     Elementos de Acceso
@@ -125,8 +127,8 @@
 //       Utilizá console.log para ver lo que obtuviste!
 
 
-
-
+const nuestroTitulo = document.querySelector("h1");
+console.log(nuestroTitulo);
 
 
 /*
