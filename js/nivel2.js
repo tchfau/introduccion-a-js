@@ -42,7 +42,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
+const comidasFavoritas = ['milanesas', 'pizza', 'empanadas'];
 
 
 
@@ -64,9 +64,7 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
-
-
+console.log(comidasFavoritas.length);
 
 
 /*
@@ -90,9 +88,7 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
-
-
+console.log(comidasFavoritas[2]);
 
 
 /*
@@ -115,17 +111,11 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
-
-
-
+comidasFavoritas[0] = 'fatay';
 
 // TAREA: console.log todo el array para verificar.
 
-
-
-
-
+console.log(comidasFavoritas);
 
 // TIP: ¡No te olvides que las posiciones de índice comienzan desde 0!
 
@@ -146,16 +136,11 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
-
-
-
-
+comidasFavoritas.push('pasta');
 
 // TAREA: console.log todo el array para verificar.
 
-
-
-
+console.log(comidasFavoritas);
 
 
 /*
@@ -181,19 +166,18 @@
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
-
-
-
-
+// const a = [1, 2, 3];
+// console.log(a);
+// a[0] = 4;
+// console.log(a);
 
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
 
-
-
-
+// a = [5, 6, 7];
+// console.log(a); 
 
 
 /*
@@ -246,9 +230,11 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
-
-
-
+// let numero = 10;
+// while (numero >= 1) {
+//     console.log(numero);
+//     numero--;
+// }
 
 
 /*
@@ -268,7 +254,18 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
+for (let i = 3; i <= 22; i+=3) {
+    console.log(i);
+}
 
+// Ejercicio:
+const notaParciales = [10, 4, 5, 6];
+let totalNotas = 0;
+for (let i=0; i<notaParciales.length; i++) {
+    totalNotas = totalNotas + notaParciales[i];
+}
+
+console.log('El promdio es ' + totalNotas / notaParciales.length);
 
 
 
@@ -296,10 +293,9 @@
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
-
-
-
-
+for (let i=0; i<comidasFavoritas.length, i++) {
+    console.log('Comidas que me gustan: ' + comidasFavoritas[i]);
+}
 
 /*
     Bucles y Logica
