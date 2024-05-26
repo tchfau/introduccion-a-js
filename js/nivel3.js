@@ -154,10 +154,10 @@ console.log(mediaLinks);
 for (let i=0; i<mediaLinks.length; i++) {
     console.log(mediaLinks[i].innerText);
 }
-
+/*
 setInterval(function() {
     nuestroTitulo.innerText = String(Math.random());
-}, 1000);
+}, 1000);*/
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
@@ -218,7 +218,6 @@ const NOMBRE = prompt('Cómo te llamás?');
 nuestroTitulo.textContent = 'Hola, ' + NOMBRE;
 
 
-
 /*
     Editando atributos
     ==================
@@ -257,7 +256,7 @@ document.querySelector('img').src = "img/kittens.jpeg";
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
 nuestroTitulo.style.backgroundColor = 'blue';
-nuestroTitulo.style.fontSize = "90px";
+nuestroTitulo.style.fontSize = "50px";
 
 
 /*
@@ -299,7 +298,7 @@ document.querySelector('header').appendChild(NODOIMAGEN);
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
 
-
+/*
 
 const $botonIngresar = document.querySelector('#ingresar');
 
@@ -313,5 +312,8 @@ $botonIngresar.onclick = function() {
     } else {
         textoResultado = 'No podés ingresar';
     }
+
     document.querySelector('#resultado').innerText = textoResultado;
+    return false;
 }
+*/
